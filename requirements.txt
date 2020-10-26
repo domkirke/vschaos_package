@@ -1,0 +1,14 @@
+numpy
+dill
+scikit-learn
+torch
+torchvision
+torchaudio
+matplotlib
+ffmpeg
+scipy
+skimage
+pywt
+torch-dct
+seaborn
+tensorboard

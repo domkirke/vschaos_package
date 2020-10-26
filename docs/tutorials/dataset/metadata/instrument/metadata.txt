@@ -1,0 +1,5 @@
+/data/bassoon.wav	0
+/data/cello.wav	1
+/data/piano.wav	2
+/data/trombone.aif	3
+/data/violin.wav	4

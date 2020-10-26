@@ -1,0 +1,3 @@
+[submodule "vschaos"]
+	path = vschaos
+	url = https://github.com/domkirke/vschaos.git

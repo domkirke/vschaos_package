@@ -1,0 +1,15 @@
+numpy
+torch
+torchvision
+torchaudio
+torch-dct
+librosa
+scikit-learn
+matplotlib
+seaborn
+dill
+ffmpeg
+scipy
+scikit-image
+python-osc
+tensorboard
