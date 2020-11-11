@@ -155,5 +155,6 @@ for current_path in args.models:
         raise e
         print('There has been an excecption : %s'%e)
         print('for model : %s'%current_path)
+        pass
 
 
