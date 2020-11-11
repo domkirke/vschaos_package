@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 0,
+			"minor" : 1,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 164.0, 107.0, 961.0, 792.0 ],
+		"rect" : [ 767.0, 108.0, 961.0, 792.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,18 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "scope~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 279.0, 426.0, 130.0, 130.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-88",
 					"maxclass" : "message",
@@ -45,7 +56,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 145.0, 366.0, 50.0, 22.0 ],
-					"text" : "256"
+					"text" : "1024"
 				}
 
 			}
@@ -70,16 +81,6 @@
 					"outlettype" : [ "signal" ],
 					"patching_rect" : [ 290.0, 231.0, 36.0, 22.0 ],
 					"text" : "*~ 0."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-112",
-					"maxclass" : "scope~",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 569.0, 612.0, 130.0, 130.0 ]
 				}
 
 			}
@@ -151,6 +152,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 50.0, 538.0, 37.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out 1"
 				}
 
@@ -163,7 +168,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 1019.75, 84.0, 50.0, 22.0 ],
-					"text" : "256"
+					"text" : "1024"
 				}
 
 			}
@@ -174,6 +179,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 468.5, 426.0, 37.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"attr_comment" : ""
+					}
+,
 					"text" : "out 2"
 				}
 
@@ -369,8 +378,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 0,
+							"minor" : 1,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -403,6 +412,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-1",
@@ -667,8 +677,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 0,
-							"revision" : 0,
+							"minor" : 1,
+							"revision" : 4,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -701,6 +711,7 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
+						"assistshowspatchername" : 0,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-8",
@@ -1404,7 +1415,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 50.0, 477.0, 83.0, 22.0 ],
+					"patching_rect" : [ 50.0, 456.0, 83.0, 22.0 ],
 					"text" : "zl 8192 group"
 				}
 
@@ -1440,7 +1451,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "int", "int", "int", "int" ],
-					"patching_rect" : [ 104.5, 296.0, 50.5, 22.0 ],
+					"patching_rect" : [ 104.5, 302.0, 50.5, 22.0 ],
 					"text" : "fftinfo~"
 				}
 
@@ -1452,7 +1463,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 3,
 					"outlettype" : [ "bang", "bang", "int" ],
-					"patching_rect" : [ 29.0, 308.0, 40.0, 22.0 ],
+					"patching_rect" : [ 29.0, 314.0, 40.0, 22.0 ],
 					"text" : "uzi"
 				}
 
@@ -1512,7 +1523,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 29.0, 244.0, 32.0, 22.0 ],
+					"patching_rect" : [ 29.0, 224.0, 32.0, 22.0 ],
 					"text" : "==~"
 				}
 
@@ -1523,7 +1534,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 3,
 					"numoutlets" : 0,
-					"patching_rect" : [ 70.0, 145.0, 198.0, 22.0 ],
+					"patching_rect" : [ 70.0, 149.0, 198.0, 22.0 ],
 					"text" : "poke~ #1-spectrogram_phase_in"
 				}
 
@@ -1630,10 +1641,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 352.0, 217.0, 35.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"attr_comment" : ""
-					}
-,
 					"text" : "out 1"
 				}
 
@@ -1836,6 +1843,15 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-11", 0 ],
+					"order" : 1,
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-27", 0 ],
+					"order" : 0,
 					"source" : [ "obj-4", 0 ]
 				}
 

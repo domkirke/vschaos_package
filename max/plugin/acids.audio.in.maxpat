@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 0,
+			"minor" : 1,
+			"revision" : 4,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 515.0, 175.0, 638.0, 820.0 ],
+		"rect" : [ 27.0, 86.0, 638.0, 820.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -37,14 +37,88 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 262.0, 342.0, 32.0, 22.0 ],
+					"text" : "$1 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 456.744171142578125, 212.0, 29.5, 22.0 ],
+					"text" : "2 0"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-7",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 453.0, 177.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"lastchannelcount" : 0,
+					"maxclass" : "live.gain~",
+					"numinlets" : 2,
+					"numoutlets" : 5,
+					"outlettype" : [ "signal", "signal", "", "float", "list" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 455.0, 325.0, 48.0, 136.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_mmin" : -70.0,
+							"parameter_longname" : "live.gain~",
+							"parameter_mmax" : 6.0,
+							"parameter_shortname" : "live.gain~",
+							"parameter_type" : 0,
+							"parameter_unitstyle" : 4
+						}
+
+					}
+,
+					"varname" : "live.gain~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 456.744171142578125, 266.0, 55.0, 22.0 ],
+					"text" : "adc~ 1 2"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 252.0, 627.0, 32.0, 22.0 ],
+					"patching_rect" : [ 252.0, 667.0, 32.0, 22.0 ],
 					"text" : "gate"
 				}
 
@@ -74,7 +148,7 @@
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 252.0, 657.0, 30.0, 30.0 ]
+					"patching_rect" : [ 252.0, 697.0, 30.0, 30.0 ]
 				}
 
 			}
@@ -85,7 +159,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 265.0, 559.0, 172.0, 22.0 ],
+					"patching_rect" : [ 265.0, 590.0, 172.0, 22.0 ],
 					"text" : "prepend /encode_spectrogram"
 				}
 
@@ -132,7 +206,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 265.0, 591.0, 52.0, 22.0 ],
+					"patching_rect" : [ 265.0, 631.0, 52.0, 22.0 ],
 					"text" : "qlim"
 				}
 
@@ -144,8 +218,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 466.5, 537.0, 77.0, 22.0 ],
-					"text" : "loadmess 30"
+					"patching_rect" : [ 466.5, 537.0, 83.0, 22.0 ],
+					"text" : "loadmess 200"
 				}
 
 			}
@@ -337,7 +411,7 @@
 					"numoutlets" : 4,
 					"outlettype" : [ "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 265.0, 380.0, 41.0, 136.0 ],
+					"patching_rect" : [ 263.0, 428.0, 40.0, 90.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 295.57794189453125, 15.5, 41.0, 99.0 ],
 					"saved_attribute_attributes" : 					{
@@ -366,7 +440,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 265.0, 342.0, 35.0, 22.0 ],
+					"patching_rect" : [ 263.0, 375.0, 35.0, 22.0 ],
 					"text" : "adc~"
 				}
 
@@ -443,7 +517,7 @@
 					"bgfillcolor_type" : "color",
 					"fontsize" : 10.0,
 					"id" : "obj-16",
-					"items" : [ 1, ",", 2 ],
+					"items" : [ 1, ",", 2, ",", 3, ",", 4, ",", 5, ",", 6, ",", 7, ",", 8, ",", 9, ",", 10, ",", 11, ",", 12, ",", 13, ",", 14 ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -520,7 +594,7 @@
 					"bgfillcolor_type" : "color",
 					"fontsize" : 10.0,
 					"id" : "obj-36",
-					"items" : [ "Built-in Microphone", ",", "Soundflower (2ch)", ",", "Soundflower (64ch)", ",", "Spotify" ],
+					"items" : [ "None", ",", "Loopback Audio", ",", "MOTU UltraLite mk3 Hybrid" ],
 					"maxclass" : "umenu",
 					"numinlets" : 1,
 					"numoutlets" : 3,
@@ -649,7 +723,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
+					"destination" : [ "obj-3", 0 ],
 					"source" : [ "obj-16", 1 ]
 				}
 
@@ -677,8 +751,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-25", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-9", 1 ],
 					"source" : [ "obj-28", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-41", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -792,6 +880,20 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-5", 1 ],
+					"source" : [ "obj-4", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-17", 0 ],
 					"source" : [ "obj-40", 0 ]
 				}
@@ -878,11 +980,11 @@
 				"name" : "BlueTextButtons-1",
 				"default" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
 					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bgcolor" : [ 0.538741, 0.764449, 0.877768, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ]
+					"fontname" : [ "Helvetica" ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -891,9 +993,6 @@
 , 			{
 				"name" : "Luca",
 				"default" : 				{
-					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
-					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
-					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -904,10 +1003,13 @@
 						"autogradient" : 0
 					}
 ,
-					"fontname" : [ "Open Sans Semibold" ],
+					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
 					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
-					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ]
+					"fontname" : [ "Open Sans Semibold" ],
+					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
+					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -917,11 +1019,11 @@
 				"name" : "RedTextButtons",
 				"default" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
 					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ]
+					"fontname" : [ "Helvetica" ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -931,11 +1033,11 @@
 				"name" : "VioletTextButton",
 				"default" : 				{
 					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
 					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
 					"bgcolor" : [ 0.715377, 0.696413, 0.824482, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ]
+					"fontname" : [ "Helvetica" ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -944,6 +1046,7 @@
 , 			{
 				"name" : "dark-night-patch",
 				"default" : 				{
+					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -954,7 +1057,6 @@
 						"proportion" : 0.39
 					}
 ,
-					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
 					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
 				}
 ,

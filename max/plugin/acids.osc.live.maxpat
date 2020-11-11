@@ -40,12 +40,24 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-61",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "FullPacket" ],
+					"patching_rect" : [ 35.5, 431.989135999999917, 165.0, 22.0 ],
+					"text" : "o.route /encode_spectrogram"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-66",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 536.0, 354.0, 95.0, 22.0 ],
+					"patching_rect" : [ 536.0, 377.0, 95.0, 22.0 ],
 					"text" : "o.print server_in"
 				}
 
@@ -83,7 +95,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 786.0, 190.0, 50.0, 76.0 ],
-					"text" : "FullPacket 28 105553175477936"
+					"text" : "FullPacket 32 105553137915440"
 				}
 
 			}
@@ -923,8 +935,8 @@
 , 							{
 								"name" : "m4l",
 								"default" : 								{
-									"fontname" : [ "Arial Bold" ],
-									"fontsize" : [ 10.0 ]
+									"fontsize" : [ 10.0 ],
+									"fontname" : [ "Arial Bold" ]
 								}
 ,
 								"parentstyle" : "",
@@ -1191,14 +1203,14 @@
 						"button" : [ 0.0 ],
 						"button[1]" : [ 0.0 ],
 						"button[2]" : [ 0.0 ],
-						"button[3]" : [ 0.0 ],
+						"button[3]" : [ 1.0 ],
 						"button[4]" : [ 1.0 ],
 						"shell_output" : [ 1 ],
 						"shell_output_toggle" : [ 1 ]
 					}
 ,
 					"text" : "autopattr @autoname 1",
-					"varname" : "u881001734"
+					"varname" : "u842000861"
 				}
 
 			}
@@ -1685,7 +1697,7 @@
 					"patching_rect" : [ 700.5, 372.0, 128.0, 18.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 43.5, 42.75, 113.0, 18.0 ],
-					"text" : "Server ready",
+					"text" : "Server ready.",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1761,9 +1773,10 @@
 					"id" : "obj-203",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 39.5, 396.0, 87.0, 22.0 ],
-					"text" : "print to_server"
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 35.5, 486.0, 95.0, 22.0 ],
+					"text" : "o.print to_server"
 				}
 
 			}
@@ -2138,7 +2151,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"order" : 2,
+					"order" : 1,
 					"source" : [ "obj-196", 0 ]
 				}
 
@@ -2153,8 +2166,8 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-203", 0 ],
-					"order" : 1,
+					"destination" : [ "obj-61", 0 ],
+					"order" : 2,
 					"source" : [ "obj-196", 0 ]
 				}
 
@@ -2216,6 +2229,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-37", 0 ],
+					"order" : 1,
 					"source" : [ "obj-33", 0 ]
 				}
 
@@ -2223,7 +2237,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-7", 0 ],
-					"disabled" : 1,
+					"order" : 0,
 					"source" : [ "obj-33", 0 ]
 				}
 
@@ -2432,6 +2446,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-203", 0 ],
+					"source" : [ "obj-61", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-64", 0 ],
 					"source" : [ "obj-63", 0 ]
 				}
@@ -2562,8 +2583,8 @@
 , 			{
 				"name" : "m4l",
 				"default" : 				{
-					"fontname" : [ "Arial Bold" ],
-					"fontsize" : [ 10.0 ]
+					"fontsize" : [ 10.0 ],
+					"fontname" : [ "Arial Bold" ]
 				}
 ,
 				"parentstyle" : "",
