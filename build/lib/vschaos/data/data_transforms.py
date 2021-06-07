@@ -664,8 +664,8 @@ class STFT(AudioTransform):
         self.hop_length = hop_length or self.win_length // 2
         self.normalized = normalized or False
         self.win_fn = win_fn or torch.hann_window
-        self.griffin_lim = torchaudio.transforms.GriffinLim(n_fft=self.n_fft, win_length=self.win_length, power=1, rand_init=False,
-                                                            window_fn=self.win_fn, hop_length=self.hop_length, n_iter=32)
+        self.griffin_lim = torchaudio.transforms.GriffinLim(n_fft=self.n_fft, win_length=self.win_length, power=1, rand_init=True,
+                                                            training=True, center=True, window_fn=self.win_fn, hop_length=self.hop_length, n_iter=64)
         self._retain_phase = retain_phase
         self.current_phase = None
 
@@ -713,14 +713,16 @@ class STFT(AudioTransform):
                                                win_length=self.win_length, hop_length=self.hop_length,
                                                normalized=self.normalized, center=True)
                 else:
-                    x = x * torch.exp(1j*torch_pi*torch.rand_like(x))
-                    if x.size(1) == 1:
-                        return torch.view_as_real(x[:, 0]).ifft(1)[:, 0].unsqueeze(0)
-                    else:
-                        return torch.istft(torch.view_as_real(x), n_fft=self.n_fft, window=window,
-                                           win_length=self.win_length, hop_length=self.hop_length,
-                                           normalized=self.normalized, center=True)
-                    #return self.griffin_lim(x)
+                    # phase = 2*torch_pi*torch.rand(x.shape[0]).unsqueeze(1).repeat(1, x.shape[1])
+                    # phase = 2*torch_pi*torch.rand_like(x)
+                    # x = x * torch.exp(1j * phase)
+                    # if x.size(1) == 1:
+                    #     return torch.view_as_real(x[:, 0]).ifft(1)[:, 0].unsqueeze(0)
+                    # else:
+                    #     return torch.istft(torch.view_as_real(x), n_fft=self.n_fft, window=window,
+                    #                        win_length=self.win_length, hop_length=self.hop_length,
+                    #                        normalized=self.normalized, center=True)
+                    return self.griffin_lim(x)
 
     def retain_phase(self, retain_phase):
         if not hasattr(self, "_retain_phase"):

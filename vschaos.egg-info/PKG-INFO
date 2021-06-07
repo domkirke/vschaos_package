@@ -13,14 +13,16 @@ Description: # vschaos_package
         This is the package version of the vschaos library, that you can find [at the following address](https://github.com/domkirke/vschaos).
         
         # Installation
+        
         To install vschaos, please enter the following instructions into your terminal : 
         ````bash
-        $ git clone --recursive https://github.com/domkirke/vschaos_package.git 
-        $ cd vschaos_package
-        $ python3 setup.py install
+        git clone --recursive https://github.com/domkirke/vschaos_package.git 
+        cd vschaos_package
+        pip install -r requirements.txt
+        python3 setup.py install
         ````
         
-        **Important** : the `setup.py` file installs secondary dependencies for the library, but you will have to install the librairies `pytorch` and `tensorflow` manually. This way, you will be able to install these packages by choosing yourself the CUDA setup in case.  
+        **Important** : the `setup.py` file installs secondary dependencies for the library, but you will have to install the librairies [`pytorch`](https://pytorch.org/) manually (with `torchvision` and `torchaudio`). This way, you will be able to install these packages by choosing yourself the CUDA setup in case.  
         
         It is strongly advised to install `vschaos_package` in a specific python environment. The pacakge has been tested using the [microconda](https://docs.conda.io/en/latest/miniconda.html) environment manager.
         
@@ -31,11 +33,13 @@ Description: # vschaos_package
         * Install the [MuBu](http://forumnet.ircam.fr/shop/fr/forumnet/59-mubu-pour-max.html) library for Max 
         * Install the [CNMAT externals](https://cnmat.berkeley.edu/downloads) for Max
         
-        You can set up the target python3 executable by editing the file `max/plugin/python_env.txt`. 
-        Example : 
-        ```
-        1, /Users/**/anaconda3/bin/python3;
-        ```
+        You can set up the target python3 executable by editing the file `max/plugin/python_env.txt`. To locate your python3 executable, you can obtain it through bash:
+        
+        ````bash
+        which python
+        => result : ${YOUR_ROOT}/anaconda3/bin/python
+        ````
+        
         Do not forget to add the folder `vschaos/max` to your File Preferences in Max. Note that the `Sine Bank` STFT inversion option is only available in Max 8.   
         
         

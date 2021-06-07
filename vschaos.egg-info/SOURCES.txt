@@ -44,6 +44,7 @@ vschaos/modules/modules_embeddings.py
 vschaos/modules/modules_hidden.py
 vschaos/modules/modules_nonlinearity.py
 vschaos/modules/modules_normalization.py
+vschaos/modules/modules_recurrent.py
 vschaos/modules/flow/__init__.py
 vschaos/modules/flow/activation.py
 vschaos/modules/flow/affine.py

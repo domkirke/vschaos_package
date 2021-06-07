@@ -9,7 +9,7 @@ def check_point(point, **kwargs):
         point = point(**kwargs)
     point = np.array(point)
     if point.shape[0] == 1:
-        point = np.repeat(point, **kwargs)
+        point = np.repeat(point, kwargs['dim'])
     return point
 
 def line_generator(*args, **kwargs):

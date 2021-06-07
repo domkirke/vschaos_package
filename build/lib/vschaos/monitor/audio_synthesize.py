@@ -65,9 +65,9 @@ def path2audio(model, current_z, transforms, meta=None,n_interp=1, order_interp=
             fig.savefig(out+'.pdf', format="pdf")
 
     # output signal
-    if signal_out.abs().max() >= 1.0:
-        signal_out = signal_out / signal_out.abs().max()
-    signal_out = transforms.invert(signal_out.clamp(-1.0, 1.0).cpu())
+    signal_out[signal_out <= 5e-4] = 0.
+    signal_out = transforms.invert(signal_out)
+    signal_out = signal_out / signal_out.abs().max()
     ta.save(out+'.wav', signal_out, sr)
     return z_interp
 
@@ -197,7 +197,7 @@ def resynthesize_files(dataset, model, transforms=None, metadata=None, out='./',
         if not os.path.isdir(os.path.dirname(path_out)):
             os.makedirs(os.path.dirname(path_out))
         os.system('cp "%s" "%s"'%(current_file, original_path))
-    
+
 
         # forward
         y = {}
@@ -273,15 +273,18 @@ def trajectory2audio(model, traj_types, transforms, n_trajectories=1, n_steps=64
                 else:
                     t_options = {'n_steps':n_steps}
                 if traj_type=='line':
-                    trajectory = traj.Line(**t_options, dim=latent_dim, origin=traj.Uniform(dim=latent_dim), end=traj.Uniform(dim=latent_dim))
+                    trajectory = traj.Line(**t_options,
+                                           dim=latent_dim,
+                                           origin=traj.Uniform(dim=latent_dim, range=[-6,6]),
+                                           end=traj.Uniform(dim=latent_dim, range=[-6,6]))
                 elif traj_type == 'ellipse':
-                    geom_args = {'radius':[traj.Uniform()()]*2, 'origin':traj.Origin, 'plane':2}
+                    geom_args = {'radius':[traj.Uniform(range=[0.1, 10])()]*2, 'origin':traj.Uniform(range=[-2, 2]), 'plane':2}
                     trajectory = traj.Ellipse(**t_options, dim=model.platent[layer]['dim'], **geom_args)
                 elif traj_type in ["square", "triangle"]:
                     # geom_args = {'freq':np.random.uniform(1e-3, 1e-2, (latent_dim,)),
                     geom_args = {'freq': 0.01,
                                  'phase':np.random.uniform(-3, 3, (latent_dim,)),
-                                 'amp':np.random.uniform(0.01, 3, (latent_dim, 2)),
+                                 'amp':np.random.uniform(0.01, 10, (latent_dim, 2)),
                                  'pulse':np.random.uniform(0.2, 0.8, (latent_dim,))}
                     if traj_type == "square":
                         trajectory = traj.Square(**t_options, dim=model.platent[layer]['dim'], **geom_args)
@@ -289,7 +292,7 @@ def trajectory2audio(model, traj_types, transforms, n_trajectories=1, n_steps=64
                         trajectory = traj.Triangle(**t_options, dim=model.platent[layer]['dim'], **geom_args)
                 elif traj_type in ["sin","sawtooth"]:
                     # geom_args = {'freq':np.random.uniform(1e-3, 1e-2, (latent_dim,)),
-                    geom_args = {'freq': 0.01,
+                    geom_args = {'freq': 0.1,
                                  'phase': np.random.uniform(-3, 3, (latent_dim,)),
                                  'amp': np.random.uniform(0.01, 3, (latent_dim, 2))}
                     if traj_type == "sin":
@@ -302,10 +305,10 @@ def trajectory2audio(model, traj_types, transforms, n_trajectories=1, n_steps=64
                 current_proj = projection
                 if issubclass(type(projection), list):
                     current_proj = projection[layer]
-                for i,t in enumerate(trajectories):
-                    z = path2audio(model, t, transforms, n_interp=1, meta=current_meta,
-                                   out=out+'/trajectories/%s_%s_%s'%(traj_type, layer,  i),
-                                   from_layer=layer, sr=sr, projection=current_proj, sample=sample, **kwargs)
+            for i,t in enumerate(trajectories):
+                z = path2audio(model, t, transforms, n_interp=1, meta=current_meta,
+                               out=out+'/trajectories/%s_%s_%s'%(traj_type, layer,  i),
+                               from_layer=layer, sr=sr, projection=current_proj, sample=sample, **kwargs)
             paths.append(z)
     return paths
 
