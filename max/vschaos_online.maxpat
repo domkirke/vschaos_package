@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 4,
+			"revision" : 10,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -552,22 +552,22 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-47::obj-44" : [ "live.gain~[3]", "live.gain~[1]", 0 ],
-			"obj-35::obj-5" : [ "live.gain~", "live.gain~", 0 ],
-			"obj-35::obj-44" : [ "live.gain~[2]", "live.gain~[1]", 0 ],
 			"obj-1::obj-82" : [ "Volume[1]", "Volume", 0 ],
+			"obj-35::obj-44" : [ "live.gain~[2]", "live.gain~[1]", 0 ],
+			"obj-35::obj-5" : [ "live.gain~", "live.gain~", 0 ],
+			"obj-47::obj-44" : [ "live.gain~[3]", "live.gain~[1]", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
+				"obj-1::obj-82" : 				{
+					"parameter_longname" : "Volume[1]"
+				}
+,
 				"obj-35::obj-5" : 				{
 					"parameter_longname" : "live.gain~",
 					"parameter_shortname" : "live.gain~"
-				}
-,
-				"obj-1::obj-82" : 				{
-					"parameter_longname" : "Volume[1]"
 				}
 
 			}
@@ -577,127 +577,113 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "acids.osc.live.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.button.graphics.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "internal.png",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin/graphics/icons_white_50",
+				"patcherrelativepath" : "./plugin/graphics/icons_white_50",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "external.png",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin/graphics/icons_white_50",
+				"patcherrelativepath" : "./plugin/graphics/icons_white_50",
 				"type" : "PNG",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "ACIDS_logo_ctrl.png",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"type" : "PNG",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "python_env.txt",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.player.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.button.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "micro.png",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin/graphics/icons_white_50",
+				"patcherrelativepath" : "./plugin/graphics/icons_white_50",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.audio.in.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.fft.in.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.sliders.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.fft.out.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.synth.fftsin.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.synth.ifft.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "acids.model.drop.maxpat",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin",
+				"patcherrelativepath" : "./plugin",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "resume-button.png",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin/graphics/icons_white_50",
+				"patcherrelativepath" : "./plugin/graphics/icons_white_50",
 				"type" : "PNG",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "mind-map-2.png",
-				"bootpath" : "~/Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
-				"patcherrelativepath" : "../../../../Dropbox/code/acids/team/axel/vschaos_package/max/plugin/graphics/icons_white_50",
+				"bootpath" : "~/Dropbox/code/vschaos_package/max/plugin/graphics/icons_white_50",
+				"patcherrelativepath" : "./plugin/graphics/icons_white_50",
 				"type" : "PNG",
 				"implicit" : 1
 			}
@@ -749,12 +735,12 @@
 , 			{
 				"name" : "BlueTextButtons-1",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.538741, 0.764449, 0.877768, 1.0 ]
+					"bgcolor" : [ 0.538741, 0.764449, 0.877768, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -768,6 +754,9 @@
 , 			{
 				"name" : "Luca",
 				"default" : 				{
+					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
+					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
+					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color" : [ 0.290196, 0.309804, 0.301961, 1.0 ],
@@ -778,13 +767,10 @@
 						"autogradient" : 0
 					}
 ,
-					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"color" : [ 0.475135, 0.293895, 0.251069, 1.0 ],
+					"accentcolor" : [ 0.32549, 0.345098, 0.372549, 1.0 ],
 					"elementcolor" : [ 0.786675, 0.801885, 0.845022, 1.0 ],
-					"selectioncolor" : [ 0.720698, 0.16723, 0.080014, 1.0 ],
-					"textcolor_inverse" : [ 0.239216, 0.254902, 0.278431, 1.0 ],
-					"fontname" : [ "Open Sans Semibold" ],
-					"bgcolor" : [ 0.904179, 0.895477, 0.842975, 0.56 ]
+					"fontname" : [ "Open Sans Semibold" ]
 				}
 ,
 				"parentstyle" : "",
@@ -793,12 +779,12 @@
 , 			{
 				"name" : "RedTextButtons",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.827321, 0.874747, 0.7195, 1.0 ]
+					"bgcolor" : [ 0.827321, 0.874747, 0.7195, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -807,12 +793,12 @@
 , 			{
 				"name" : "RedTextButtons-1",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ]
+					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -821,12 +807,12 @@
 , 			{
 				"name" : "RedTextButtons-2",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ]
+					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -835,12 +821,12 @@
 , 			{
 				"name" : "RedTextButtons-3",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ]
+					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -849,12 +835,12 @@
 , 			{
 				"name" : "RedTextButtons-4",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ]
+					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -863,12 +849,12 @@
 , 			{
 				"name" : "RedTextButtons-5",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ]
+					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -877,12 +863,12 @@
 , 			{
 				"name" : "RedTextButtons-6",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ]
+					"bgcolor" : [ 0.843137, 0.733333, 0.729412, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -891,12 +877,12 @@
 , 			{
 				"name" : "VioletTextButton",
 				"default" : 				{
-					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
-					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
-					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
 					"selectioncolor" : [ 0.1, 0.1, 0.1, 1.0 ],
-					"fontname" : [ "Helvetica" ],
-					"bgcolor" : [ 0.715377, 0.696413, 0.824482, 1.0 ]
+					"bgcolor" : [ 0.715377, 0.696413, 0.824482, 1.0 ],
+					"color" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"accentcolor" : [ 0.25, 0.25, 0.25, 1.0 ],
+					"elementcolor" : [ 0.55, 0.55, 0.55, 1.0 ],
+					"fontname" : [ "Helvetica" ]
 				}
 ,
 				"parentstyle" : "",
@@ -914,9 +900,9 @@
 						"proportion" : 0.39
 					}
 ,
-					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ],
 					"textcolor" : [ 0.862745, 0.870588, 0.878431, 1.0 ],
-					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ]
+					"patchlinecolor" : [ 0.439216, 0.74902, 0.254902, 0.898039 ],
+					"accentcolor" : [ 0.952941, 0.564706, 0.098039, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -958,8 +944,8 @@
 , 			{
 				"name" : "multislider001",
 				"default" : 				{
-					"color" : [ 0.0, 0.0, 0.0, 1.0 ],
-					"bgcolor" : [ 0.945827, 0.711942, 0.174445, 0.0 ]
+					"bgcolor" : [ 0.945827, 0.711942, 0.174445, 0.0 ],
+					"color" : [ 0.0, 0.0, 0.0, 1.0 ]
 				}
 ,
 				"parentstyle" : "",
